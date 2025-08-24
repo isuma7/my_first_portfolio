@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .section {
+            margin: 20px 100px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+
+        form {
+            background: #fff;
+            padding: 15px;
+            border: 1px solid #ccc;
+            width: 300px;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+
+        input,
+        textarea,
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Profile</h1>
+
+    <!-- Profile Picture -->
+    <img src="https://via.placeholder.com/150" alt="Profile Picture">
+
+    <!-- About Me -->
+    <div class="section">
+        <h2>About Me</h2>
+        <p>Hello! My name is Ali. I am a student learning HTML and I love building simple websites.</p>
+    </div>
+
+    <section>
+        <!-- <div class="skills-section"> 
+            <h2>My Skills</h2>
+            <p>Here are some of the skills I am currently learning:</p>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+    </section> -->
+
+        <!-- Hobbies -->
+        <div class="section">
+            <h2>My Hobbies</h2>
+            <ul>
+                <li>Reading</li>
+                <li>Playing football</li>
+                <li>Coding</li>
+            </ul>
+        </div>
+
+        <!-- Weekly Schedule -->
+        <div class="section">
+            <h2>My Weekly Schedule</h2>
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Activity</th>
+                    <th>Time</th>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>Math Class</td>
+                    <td>9:00 AM</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Football Practice</td>
+                    <td>5:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Science Class</td>
+                    <td>11:00 AM</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Favorite Website -->
+        <div class="section">
+            <h2>My Favorite Website</h2>
+            <p>Check out <a href="https://www.wikipedia.org" target="_blank">Wikipedia</a> to learn something new every
+                day!
+            </p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="section">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+</body>
+
+</html>
