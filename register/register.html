@@ -1,103 +1,53 @@
 <!DOCTYPE html>
+<!-- register/register.html — a FORM with many input types.
+     This page lives inside the /register folder, so its links start
+     with "../" which means "go up one level" to the site root. -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Register</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #fdfdfd;
-        }
-
-        header,
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-
-        form {
-            width: 400px;
-            margin: 30px auto;
-            background: #ecf0f1;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            font-weight: bold;
-        }
-
-        input,
-        select,
-        textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        textarea {
-            resize: vertical;
-        }
-
-        .inline-options {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 15px;
-        }
-
-        .inline-options label {
-            font-weight: normal;
-        }
-
-        input[type=radio],
-        input[type=checkbox] {
-            width: auto;
-            margin-right: 6px;
-        }
-
-        input[type=submit],
-        input[type=reset] {
-            width: 48%;
-            background: #2c3e50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        input[type=submit]:hover,
-        input[type=reset]:hover {
-            background: #34495e;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register · Student Portal</title>
+    <!-- ../ goes up out of the /register folder to find css/style.css -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
     <header>
         <h1>Student Registration</h1>
     </header>
-    <main>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../students.html">Student List</a>
+        <a href="register.html" class="active">Register</a>
+        <a href="../contact.html">Contact</a>
+    </nav>
+
+    <main class="container">
+        <h2>Create an account</h2>
+
+        <!-- A static form has no "action" yet — it will submit to a PHP
+             file once you add the back-end (see the course, Chapter 3). -->
         <form>
+            <!-- Text input -->
             <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" placeholder="e.g. Ali bin Ahmad" required>
 
+            <!-- Email input (checks for a valid email format) -->
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
 
+            <!-- Radio buttons: choose ONE.
+                 Same name="gender" = they belong to one group. -->
             <label>Gender:</label>
             <div class="inline-options">
                 <label><input type="radio" name="gender" value="male"> Male</label>
                 <label><input type="radio" name="gender" value="female"> Female</label>
             </div>
 
+            <!-- Checkboxes: choose MANY -->
             <label>Courses:</label>
             <div class="inline-options">
                 <label><input type="checkbox" name="course" value="HTML"> HTML</label>
@@ -105,22 +55,27 @@
                 <label><input type="checkbox" name="course" value="JavaScript"> JavaScript</label>
             </div>
 
+            <!-- Dropdown menu -->
             <label for="year">Year:</label>
             <select id="year" name="year">
                 <option value="2024">2024</option>
                 <option value="2025">2025</option>
             </select>
 
+            <!-- Multi-line text box -->
             <label for="message">Why do you want to join?</label>
             <textarea id="message" name="message" rows="4"></textarea>
 
+            <!-- Submit sends the form; Reset clears it -->
             <div class="inline-options">
                 <input type="submit" value="Submit">
                 <input type="reset" value="Clear">
             </div>
         </form>
-        <a href="index.html" style="display:block; text-align:center;">⬅ Back to Home</a>
+
+        <a class="back-link" href="../index.html">&larr; Back to Home</a>
     </main>
+
     <footer>&copy; 2025 Student Portal</footer>
 </body>
 

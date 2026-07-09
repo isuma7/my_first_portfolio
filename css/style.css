@@ -1,0 +1,159 @@
+/* ==============================================================
+   Student Portal — shared stylesheet
+   --------------------------------------------------------------
+   ONE file styles EVERY page. Change a colour or size here once
+   and all pages update together.
+
+   Each page loads it in the <head> with:
+       <link rel="stylesheet" href="css/style.css">
+   (pages inside a folder use "../css/style.css")
+   ============================================================== */
+
+/* --- 1. Colour palette (CSS variables) -----------------------
+   Define a colour once, then reuse it with  var(--name)         */
+:root {
+  --navy:       #2c3e50;   /* header, footer, buttons   */
+  --navy-dark:  #34495e;   /* nav bar and hovers        */
+  --page-bg:    #f7f9fb;   /* page background           */
+  --card-bg:    #ffffff;   /* boxes, tables, forms      */
+  --border:     #d9dee3;   /* borders and lines         */
+  --text:       #2b2b2b;   /* body text                 */
+  --accent:     #e67e22;   /* highlight / current page  */
+}
+
+/* --- 2. Base -------------------------------------------------
+   box-sizing makes an element's width include its padding and
+   border, which makes sizing much easier to predict.            */
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* --- 3. Header (the banner at the top) ----------------------- */
+header {
+  background: var(--navy);
+  color: #ffffff;
+  text-align: center;
+  padding: 24px 16px;
+}
+header h1 { margin: 0; font-size: 28px; }
+header p  { margin: 6px 0 0; opacity: 0.85; }
+
+/* --- 4. Navigation bar --------------------------------------- */
+nav {
+  background: var(--navy-dark);
+  display: flex;            /* lay the links out in a row        */
+  flex-wrap: wrap;          /* wrap onto a new line on phones     */
+  justify-content: center;
+  gap: 8px 24px;
+  padding: 12px;
+}
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 4px 6px;
+}
+nav a:hover { text-decoration: underline; }
+nav a.active { color: var(--accent); }   /* the page you're on */
+
+/* --- 5. Main content ----------------------------------------- */
+main { padding: 24px 16px; }
+
+/* centre the content and stop it getting too wide on big screens */
+.container { max-width: 900px; margin: 0 auto; }
+
+h2 { color: var(--navy); }
+main a { color: var(--navy-dark); }
+
+/* a reusable box */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+
+/* the "Back to Home" link, centred */
+.back-link { display: block; text-align: center; margin: 24px 0; }
+
+/* --- 6. Tables (Student List) -------------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;   /* merge the double borders into one */
+  margin: 16px 0;
+  background: var(--card-bg);
+}
+th, td {
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  text-align: left;
+}
+th { background: var(--navy-dark); color: #ffffff; }
+tr:nth-child(even) td { background: #f2f5f8; }   /* stripe every 2nd row */
+
+/* --- 7. Forms (Register / Contact) --------------------------- */
+form {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 460px;
+  margin: 20px auto;
+}
+label { display: block; font-weight: bold; margin: 12px 0 4px; }
+input, select, textarea {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 15px;
+}
+textarea { resize: vertical; }
+
+/* put radio buttons / checkboxes side by side */
+.inline-options { display: flex; flex-wrap: wrap; gap: 16px; margin: 6px 0 4px; }
+.inline-options label { font-weight: normal; margin: 0; }
+.inline-options input { width: auto; margin-right: 6px; }
+
+/* buttons */
+button,
+input[type="submit"],
+input[type="reset"] {
+  width: auto;
+  background: var(--navy);
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 12px;
+}
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover { background: var(--navy-dark); }
+input[type="reset"] { background: #7f8c8d; }   /* grey "clear" button */
+
+/* --- 8. Footer ----------------------------------------------- */
+footer {
+  background: var(--navy);
+  color: #ffffff;
+  text-align: center;
+  padding: 16px;
+  margin-top: 32px;
+}
+
+/* --- 9. Small screens (responsive) --------------------------
+   These rules only apply when the screen is 600px wide or less. */
+@media (max-width: 600px) {
+  header h1 { font-size: 22px; }
+  nav { gap: 6px 14px; }
+  main { padding: 16px 12px; }
+  form { max-width: 100%; }
+}

@@ -1,50 +1,43 @@
 <!DOCTYPE html>
+<!-- about.html — describes what the project teaches -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>About</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #fdfdfd;
-        }
-
-        header,
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        ol {
-            background: #ecf0f1;
-            padding: 15px;
-            border-radius: 8px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About · Student Portal</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
         <h1>About This System</h1>
     </header>
-    <main>
-        <p>This system is created to demonstrate HTML & CSS basics:</p>
-        <ol>
-            <li>Headings, paragraphs, and links</li>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="students.html">Student List</a>
+        <a href="register/register.html">Register</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main class="container">
+        <h2>About</h2>
+        <p>This Student Portal is a teaching example that demonstrates the basics of HTML &amp; CSS:</p>
+
+        <!-- An ordered (numbered) list, styled as a card -->
+        <ol class="card">
+            <li>Headings, paragraphs and links</li>
             <li>Lists and tables</li>
             <li>Forms and input elements</li>
-            <li>Media integration</li>
+            <li>Images, audio and video</li>
+            <li>Styling every page with one shared CSS file</li>
         </ol>
-        <a href="index.html">⬅ Back to Home</a>
+
+        <a class="back-link" href="index.html">&larr; Back to Home</a>
     </main>
+
     <footer>&copy; 2025 Student Portal</footer>
 </body>
 

@@ -1,65 +1,40 @@
 <!DOCTYPE html>
+<!-- students.html — shows data in a TABLE -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Students</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #fdfdfd;
-            margin: 0;
-        }
-
-        header,
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-
-        table {
-            width: 80%;
-            margin: 20px auto;
-            border-collapse: collapse;
-        }
-
-        th,
-        td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background: #34495e;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background: #f2f2f2;
-        }
-
-        a {
-            display: block;
-            text-align: center;
-            margin: 20px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List · Student Portal</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
         <h1>Student List</h1>
     </header>
-    <main>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="students.html" class="active">Student List</a>
+        <a href="register/register.html">Register</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main class="container">
+        <h2>Registered Students</h2>
+        <p>A table has rows (<code>&lt;tr&gt;</code>), header cells (<code>&lt;th&gt;</code>)
+            and data cells (<code>&lt;td&gt;</code>).</p>
+
         <table>
+            <!-- Header row -->
             <tr>
                 <th>Name</th>
                 <th>Course</th>
                 <th>Year</th>
             </tr>
+            <!-- Data rows -->
             <tr>
                 <td>Ali</td>
                 <td>Web Programming</td>
@@ -70,9 +45,16 @@
                 <td>Networking</td>
                 <td>2025</td>
             </tr>
+            <tr>
+                <td>Chong</td>
+                <td>Multimedia</td>
+                <td>2025</td>
+            </tr>
         </table>
-        <a href="index.html">⬅ Back to Home</a>
+
+        <a class="back-link" href="index.html">&larr; Back to Home</a>
     </main>
+
     <footer>&copy; 2025 Student Portal</footer>
 </body>
 
